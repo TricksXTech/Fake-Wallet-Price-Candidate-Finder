@@ -21,7 +21,7 @@ async function scan() {
       const liquidity = pair.liquidity?.usd ?? 0;
       const fdv = pair.fdv ?? 0;
 
-      const veryLowPrice = price > 0 && price < 0.001;
+      const veryLowPrice = price > 0 && price < 10;
       const lowLiquidity = liquidity >= 0 && liquidity < 5000;
       const absurdFDV = fdv > 5_000_000;
 
